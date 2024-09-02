@@ -1,0 +1,52 @@
+sort1 uses: Bubble sort
+
+How do you know?:
+Random:
+real    0m20.582s
+Reversed:
+real    0m15.841s
+Sorted:
+real    0m3.236s
+
+In Bubble sort,when the number are in a sorted order it takes less time as compared to merge sort or selection sort
+because in best case it has to check Omega(n) where n is the count of numbers. So, for sorted order it has the lowest
+time and for the worst case it has to check O(n^2) cases which tooks it longer than sorted case.These two conditions
+gives me hint that it is Bubble sort in sort1 file.Bubble sort swap values until all values are sorted.
+
+sort2 uses: Merge sort
+
+How do you know?:
+
+Random:
+real    0m5.968s
+Reversed:
+real    0m5.817s
+Sorted:
+real    0m5.275s
+
+Merge sort Half the array ,arrange left half ,arrange right half ,combine them both and arrange again.
+In both merge sort and selection sort their best and worst cases are same.Like in merge sort,it best case is Omega(n log n)
+and worst case is also O(n log n).From here ,we can guess that this can never be Bubble sort,it can be the remaining of
+the two.Now,if we check for file contain 50000 numbers then for the best and worst case we have value of  the 234948
+approx. while in Selection sort we have to take square of n(50000) which is many times larger than 234948.This is second
+hint towards merge sort.Because in selection sort,the time for both random and sorted is same but that may be larger than
+values of merge sort.The value 234948 approx. tells us that merge sort is faster than selection sort.
+
+sort3 uses: Selection sort
+
+How do you know?:
+Random:
+real    0m11.617s
+
+Reversed:
+real    0m11.480s
+
+Sorted:
+real    0m11.026s
+
+We have to iterate over every value.
+Worst and best case are same we does not know that whether the list is sorted or not
+Based on the points stated above,like above sort is merge sort and first one has the shortest time for best case scenario
+All the sorting file are tested on 50000 numbers file.Selection sort has Omega(n^2) for best case and O(n^2) for worst
+case .When we put 50000 for best case or worst case we get 2.5 billion which means that in both best and worst cases we
+have time larger than merge sort.So,this must be selection sort.
